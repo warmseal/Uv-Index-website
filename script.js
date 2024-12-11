@@ -1,23 +1,12 @@
-function keyAdd(){
-
-const checkinnerHTML = document.querySelectorAll("input")[0].value;
-
-if (checkinnerHTML == ""){
-
-    window.location.reload();
-
-
-}
-else if (checkinnerHTML == " "){
-
-    window.location.reload();
-
+function reload(){
+if(document.querySelectorAll("h5")[0].innerHTML == ""){
+location.reload();
 }
 }
-
-
 
 function get(){
+document.querySelectorAll("button")[0].removeAttribute("onclick");
+document.querySelectorAll("h5")[0].innerHTML = "";
 const info = document.getElementById("info");
 const locationurl = "https://nominatim.openstreetmap.org/search.php?q=" + info.value + "&format=json";
 
@@ -115,10 +104,6 @@ else{
 sun2.setAttribute("src", "media/No_image_available.svg");
 sun2.setAttribute("alt", "No image available"); 
 }
-
-
-document.querySelectorAll("button")[0].removeAttribute("onclick");
-
 })});};
 
 
